@@ -184,7 +184,7 @@
                                     <tr>
                                         <td align="center" class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #444444; padding: 0 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;"> Confirmación de reserva
                                             en
-                                            ${object.company_id.display_name}</td>
+                                            ${object.company_id.property_name}</td>
                                     </tr>
                                     <tr>
                                         <td align="center" style="padding: 20px 0 0 0;">
@@ -193,7 +193,7 @@
                                     </tr>
                                     <tr>
                                         <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Hola ${object.partner_id.firstname}<br />
-                                            Tu reserva en <b>${object.company_id.display_name}</b> queda confirmada. Te esperamos el día <b>${object.room_lines[0].checkin[8:10]} del ${object.room_lines[0].checkin[5:7]} de
+                                            Tu reserva en <b>${object.company_id.property_name}</b> queda confirmada. Te esperamos el día <b>${object.room_lines[0].checkin[8:10]} del ${object.room_lines[0].checkin[5:7]} de
                                                 ${object.room_lines[0].checkin[0:4]}</b>. Si podemos ayudarte en cualquier tipo de gestión, no dudes en hacérnoslo saber.<br />
                                         </td>
                                     </tr>
@@ -367,6 +367,10 @@
                                                                         % endif
                                                                         <br />
                                                                     </strong>
+                                                                    <strong style="margin-left:2em">Entrada</strong>: ${format_tz(rline['checkin']+ ' 00:00:00', format="%d de %B de %Y")}<br>
+                                                                    <strong style="margin-left:2em">Salida</strong>: ${format_tz(rline['checkout']+ ' 00:00:00', format="%d de %B de %Y")}<br>
+                                                                    <strong style="margin-left:2em" 2="">Nº de noches</strong>: ${rline['nights']}<br><br>
+
                                                                     % endfor
 
                                                                     <br />
@@ -404,13 +408,13 @@
                                                             <tr>
                                                             </tr>
                                                             <tr>
-                                                                <a href="http://maps.google.es/?q=${object.company_id.display_name}%20${object.company_id.street}%20${object.company_id.city}" style="background-color:transparent" target="_blank">
+                                                                <a href="http://maps.google.es/?q=${object.company_id.property_name}%20${object.company_id.street}%20${object.company_id.city}" style="background-color:transparent" target="_blank">
                                                                     <br />
                                                                     <img src="https://www.aldahotels.es/firma/email/llegada/como-llegar.png" alt="Ver mapa" border="0">
                                                                 </a>
                                                                 <p>
                                                                     <br />
-                                                              <a href="https://www.google.com/maps/dir/?api=1&destination=${object.company_id.display_name}%20${object.company_id.street}%20${object.company_id.city}" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 20px; padding: 10px 20px 10px 20px;">
+                                                              <a href="https://www.google.com/maps/dir/?api=1&destination=${object.company_id.property_name}%20${object.company_id.street}%20${object.company_id.city}" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 20px; padding: 10px 20px 10px 20px;">
                                                                         <div style="padding: 0.5em; background-color: #45C2B1; border-color: #45C2B1; border-width: 2px;border-style:solid; border-bottom-style: solid;border-left-style: solid;border-right-style: solid;border-top-style: solid;-webkit-border-radius: 10; -moz-border-radius: 10; border-radius: 10px;">¿Como
                                                                             llegar desde su ubicación actual?</div>
                                                               </a>
@@ -606,12 +610,12 @@
                                                                 <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">
                                                                     <p>
                                                                         <br />
-                                                                        <a href="https://www.google.com/maps/dir/?api=1&destination=${object.company_id.display_name}%20${object.company_id.street}%20${object.company_id.city}">Pulse en este enlace,
+                                                                        <a href="https://www.google.com/maps/dir/?api=1&destination=${object.company_id.property_name}%20${object.company_id.street}%20${object.company_id.city}">Pulse en este enlace,
                                                                             para
                                                                             conocer como llegar desde su ubicación actual</a>
                                                                     </p>
 <!-- DATOS PARRAFO COCHE p -->
-                                                <p> Si vienes en coche, podrás aparcar en los alrededores del hotel, aunque la zona de playa cuenta con zona azul. También disponemos de <em>parking</em> propio para clientes (bajo disponibilidad).</p>      
+                                                <p> Si vienes en coche, podrás aparcar en los alrededores del hotel, aunque la zona de playa cuenta con zona azul. También disponemos de <em>parking</em> propio para clientes (bajo disponibilidad).</p>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -743,7 +747,7 @@
                                                                 <td valign="top" style="padding: 30px 30px 20px 30px; height: 230px; background-color:#45C2B1 ">
                                                                     <table border="0" cellspacing="0" cellpadding="0">
                                                                         <tr>
-                                                                            <td align="justify" class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #FFFFFF; padding: 15px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">${object.company_id.display_name}</td>
+                                                                            <td align="justify" class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #FFFFFF; padding: 15px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">${object.company_id.property_name}</td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td align="justify" class="paragraph" style="padding: 10px 0 0 0;color: #FFFFFF;">       El Hotel Alda Santa Cristina se encuentra a pie de playa, por lo que disfruta de unas vistas impresionantes de la ría de O Burgo. Además, a escasos minutos en coche, podrás estar en el centro de A Coruña.</td>
