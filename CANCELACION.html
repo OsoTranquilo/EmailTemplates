@@ -179,7 +179,7 @@
                                                     <table style="width: 50px;" width="50px" height="5px" cellspacing="0" cellpadding="0" border="0">
                                                         <tbody>
                                                             <tr>
-                                                                <td style="font-size: 1px; line-height: 5px;" height="5px" bgcolor="#45C2B1">&nbsp;
+                                                                <td style="font-size: 1px; line-height: 5px;" height="5px" bgcolor="#45C2B1">
 
                                                                 </td>
                                                             </tr>
@@ -256,12 +256,14 @@
                                                                                     % endif
                                                                                     <br>
                                                                                     % for rline in object.get_grouped_reservations_json('cancelled'):
-                                                                                    <strong>${rline['num']} x ${rline['room_type']['name']}
-                                                                                        % if rline['childrens'] &gt; 0:
-                                                                                        (${rline['adults']} Adults + ${rline['childrens']} Childrens)
+                                                                                    <strong>
+                                                                                        ${rline['num']} x ${rline['room_type']['name']}
+                                                                                        % if rline['childrens'] == 0:
+                                                                                        (${rline['adults']} Adultos)
                                                                                         % else:
-                                                                                        (${rline['adults']} Adults)
-                                                                                        %endif
+                                                                                        (${rline['adults']} Adultos + ${rline['childrens']} Niños)
+                                                                                        % endif
+                                                                                        <br />
                                                                                     </strong>
                                                                                     <br>
                                                                                     <strong style="margin-left:2em">Entrada</strong>: ${format_tz(rline['checkin'], format="%d de %B de %Y")}<br>
@@ -287,7 +289,7 @@
                             <!--2 Column-->
                             <tr>
                             </tr>
-                            <!--Article with thumbnail-->
+                            <!--Article with thumbnail importes-->
                             <tr>
                                 <td class="borderbottom" style="padding: 30px 0px 0px 0px;">
                                     <table class="columns" width="650" cellspacing="0" cellpadding="0" border="0">
@@ -405,7 +407,7 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td class="h2" style="color: #45C2B1">NUESTRAS REDES SOCIALES</td>
-                                                                <td style="padding: 0 0 30px 0;">&nbsp;</td>
+                                                                <td style="padding: 0 0 30px 0;"></td>
                                                             </tr>
                                                             <tr>
                                                             </tr>
@@ -448,7 +450,7 @@
                                                                                     <table style="width: 50px;" width="50px" height="5px" cellspacing="0" cellpadding="0" border="0">
                                                                                         <tbody>
                                                                                             <tr>
-                                                                                                <td background-color="#3B5998" style="font-size: 1px; line-height: 5px;" height="5px">&nbsp;
+                                                                                                <td background-color="#3B5998" style="font-size: 1px; line-height: 5px;" height="5px">
                                                                                                 </td>
                                                                                             </tr>
                                                                                         </tbody>
@@ -510,7 +512,7 @@
                                                                                     <table style="width: 50px;" width="50px" height="5px" cellspacing="0" cellpadding="0" border="0">
                                                                                         <tbody>
                                                                                             <tr>
-                                                                                                <td background-color="#E56459" style="font-size: 1px; line-height: 5px;" height="5px">&nbsp;
+                                                                                                <td background-color="#E56459" style="font-size: 1px; line-height: 5px;" height="5px">
                                                                                                 </td>
                                                                                             </tr>
                                                                                         </tbody>
@@ -572,7 +574,7 @@
                                                                                     <table style="width: 50px;" width="50px" height="5px" cellspacing="0" cellpadding="0" border="0">
                                                                                         <tbody>
                                                                                             <tr>
-                                                                                                <td background-color="#1DA1F2" style="font-size: 1px; line-height: 5px;" height="5px">&nbsp;
+                                                                                                <td background-color="#1DA1F2" style="font-size: 1px; line-height: 5px;" height="5px">
                                                                                                 </td>
                                                                                             </tr>
                                                                                         </tbody>
