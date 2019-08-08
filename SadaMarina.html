@@ -6,34 +6,28 @@
         padding: 0;
         min-width: 100% !important;
     }
-
     a {
         color: #5e96ea;
         text-decoration: none;
         font-weight: bold;
     }
-
     img {
         height: auto;
     }
-
     .content {
         border: 1px solid #eeeeee;
     }
-
     .logo {
         font-family: sans-serif;
         font-size: 36px;
         font-weight: bold;
         color: #ffffff;
     }
-
     .link a {
         font-family: sans-serif;
         font-size: 12px;
         color: #ffffff;
     }
-
     .subheading {
         font-size: 14px;
         color: #cccccc;
@@ -43,7 +37,6 @@
         text-transform: uppercase;
         letter-spacing: 1px;
     }
-
     .h1 {
         font-family: sans-serif;
         font-size: 48px;
@@ -52,7 +45,6 @@
         color: #ffffff;
         padding: 0 0 0 0;
     }
-
     .h2 {
         font-family: sans-serif;
         font-size: 18px;
@@ -62,7 +54,6 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
-
     .h3 {
         font-family: sans-serif;
         font-size: 24px;
@@ -70,7 +61,6 @@
         color: #555555;
         padding: 0 0 0 0;
     }
-
     .h4 {
         font-family: sans-serif;
         font-size: 18px;
@@ -78,7 +68,6 @@
         color: #666666;
         padding: 0 0 0 0;
     }
-
     .paragraph {
         font-family: sans-serif;
         font-size: 14px;
@@ -87,7 +76,6 @@
         font-weight: 200;
         padding: 20px 0 0 0;
     }
-
     .listitem {
         font-family: sans-serif;
         font-size: 15px;
@@ -95,39 +83,32 @@
         font-weight: 200;
         padding: 0 0 20px 0;
     }
-
     .smalltext {
         font-family: sans-serif;
         font-size: 14px;
         color: #cccccc;
         padding: 3px 0 0 0;
     }
-
     .borderbottom {
         border-bottom: 1px solid #f2eeed;
     }
-
     /*Media Queries*/
     @media only screen and (max-width: 651px) {
         .columns {
             width: 100% !important;
         }
-
         .columncontainer {
             display: block !important;
             width: 100% !important;
         }
-
         .paragraph,
         .listitem {
             font-size: 18px;
         }
-
         .link {
             float: left;
         }
     }
-
     @media only screen and (min-width: 651px) {
         .content {
             width: 650px !important;
@@ -192,10 +173,9 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Hola ${object.partner_id.firstname}<br />
-                                            Tu reserva en <b>${object.company_id.property_name}</b> queda confirmada. Te esperamos el día <b>${object.room_lines[0].checkin[8:10]} del ${object.room_lines[0].checkin[5:7]} de
-                                                ${object.room_lines[0].checkin[0:4]}</b>. Si podemos ayudarte en cualquier tipo de gestión, no dudes en hacérnoslo saber.<br />
-                                        </td>
+                                        <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Hola ${object.partner_id.firstname}<br>
+Tu reserva en <strong>${object.company_id.property_name}</strong> queda confirmada. Te esperamos el día <strong>${object.room_lines[0].checkin[8:10]} del ${object.room_lines[0].checkin[5:7]} de
+                                        ${object.room_lines[0].checkin[0:4]}</strong>. Si podemos ayudarte en cualquier tipo de gestión, no dudes en hacérnoslo saber.<br></td>
                                     </tr>
                                     <tr>
                                         <td align="center" style="padding: 20px 0 0px 0; ">
@@ -389,7 +369,8 @@
                                           <b><p style="color:#45C2B1";>Información importante</p></b>
 					En caso de cancelar tu reserva, podrás hacerlo de <b>manera gratuita</b> hasta las 23:59 horas del día anterior a tu llegada.
 					<br/>Esta reserva está sujeta al <b>pago de la primera noche</b> antes de las 15:00 h del día de entrada. En caso que la tarjeta no sea válida, nos pondremos en contacto contigo para que nos facilites un nuevo método de pago. De no poder verificar correctamente la tarjeta, tu reserva podrá ser cancelada.<br/>
-				        En reservas con <b>tarifas no reembolsables</b> no se podrá ni cancelar ni modificar, por ello no se reembolsará el dinero. En este tipo de tarifas, se procederá a cargar el importe total de la reserva en el momento de su confirmación, en la tarjeta facilitada.                                        </td>
+				        En reservas con <b>tarifas no reembolsables</b> no se podrá ni cancelar ni modificar, por ello no se reembolsará el dinero. En este tipo de tarifas, se procederá a cargar el importe total de la reserva en el momento de su confirmación, en la tarjeta facilitada.
+																	<p>Este hotel <b>no admite mascotas</b>. Disculpa las molestias.</td></p>
                                                             </tr>
                                                             <tr>
                                                             </tr>
@@ -566,14 +547,15 @@
                                                     <td valign="top" style="padding: 20px 30px 20px 0px;">
                                                         <table border="0" cellspacing="0" cellpadding="0">
                                                             <tr>
-                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #555555; padding: 10px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;"> Información
-                                                                    adicional</td>
+                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #45C2B1; padding: 10px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;"> Recomendaciones en la ciudad - La Guía del Viajero</td>
                                                             </tr>
                                                             <tr>
                                                                 <td style="padding: 20px 0 10px 0;">
                                                                     <table width="50px" style="width: 50px;" height="5px" border="0" cellspacing="0" cellpadding="0">
                                                                         <tr>
-                                                                            <p style="font-size: 2em; line_height=0px; color: #45C2B1;">__</p>
+                                                                            <p style="font-size: 15px; line_height=0px; color: #45C2B1;"><a href="http://bit.ly/2ONaci1">> Guía de playas de Sada y alrededores: opiniones y cómo llegar</p></a>
+																		<p style="font-size: 15px; line_height=0px; color: #45C2B1;"><a href="http://bit.ly/2OVIhMK">> Dónde comer barato en Sada: restaurantes en los que no gastar mucho</p></a>
+																	<p style="font-size: 15px; line_height=0px; color: #45C2B1;"><a href="http://bit.ly/2OODYmy">> Dónde aparcar en Sada</p></a>
                                                                         </tr>
                                                                     </table>
                                                                 </td>
