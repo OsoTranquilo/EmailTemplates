@@ -148,12 +148,12 @@
                     <table class="content" background-color="#f6f6f6" align="center" cellpadding="0" cellspacing="0" border="0" style="width: 650px !important; border: 1px solid #eeeeee; background-color:#f6f6f6;">
                         <!--Header-->
                         <tr>
-                            <td style="padding: 30px 30px 20px 30px;background-color:#ffffff">
+                            <td style="padding: 30px 30px 20px 30px;background-color:#1B1B1B">
                                 <table border="0x" cellpadding="0" cellspacing="0" width="100%" class="columns">
                                     <tr valign="top">
                                     </tr>
                                 </table>
-                                <img src="https://www.aldahotels.es/firma/email/llegada/confort-logo.png" width="251" height="57" alt="Confort" />
+                                <img src="https://www.aldahotels.es/firma/email/llegada/logobl.png" width="251" height="57" alt="Alda Hotels" />
                                 <table border="0x" cellpadding="0" cellspacing="0" width="100%" class="columns">
                                     <tr valign="top">
                                         <td width="50%" valign="middle" class="columncontainer">
@@ -163,7 +163,7 @@
                                                         <table border="0" cellspacing="0" cellpadding="0" class="link">
                                                             <tr>
                                                                 <td style="padding: 0px 15px 0px 0px;">
-                                                                    <a href="www.hotelconfortoviedo.es" style="color:#45c2b1">www.hotelconfortoviedo.es</a>
+                                                                    <a href="#" style="color:#FFFFFF">www.aldahotels.com</a>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -226,7 +226,7 @@
                                                         <table border="0" cellspacing="0" cellpadding="0">
                                                             <tr>
                                                                 <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #444444; padding: 10px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;"> ¿Llegarás más
-                                                                    tarde de las 17:00 horas?</td>
+                                                                tarde de las 17:00 horas?</td>
                                                             </tr>
                                                             <tr>
                                                                 <td style="padding: 20px 0 10px 0;">
@@ -292,12 +292,12 @@
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td height="50" valign="middle" style="padding: 0 10px 0 0;">
-                                                                                            <img src="https://www.aldahotels.es/firma/email/llegada/restaurante.png" alt="Desayuno" />
+                                                                                            <img src="https://www.aldahotels.es/firma/email/llegada/restaurante.png" alt="Restauracion" />
                                                                                         </td>
                                                                                         <td class="listitem" style="padding: 10px 10px 0 0;color: #666666; font-weight: 200">Desayuno</td>
                                                                                     </tr>
-                                                                                 
-																					                                                                                    <tr>
+
+																					 <tr>
                                                                                         <td height="50" valign="middle" style="padding: 0 10px 0 0;">
                                                                                           <img src="https://www.aldahotels.es/firma/email/llegada/ascensor-clientes.png" alt="Ascensor" />
                                                                                         </td>
@@ -371,7 +371,7 @@
                                                                     <strong style="margin-left:2em">Entrada</strong>: ${format_tz(rline['checkin']+ ' 00:00:00', format="%d de %B de %Y")}<br>
                                                                     <strong style="margin-left:2em">Salida</strong>: ${format_tz(rline['checkout']+ ' 00:00:00', format="%d de %B de %Y")}<br>
                                                                     <strong style="margin-left:2em" 2="">Nº de noches</strong>: ${rline['nights']}<br><br>
-
+                                                                    
                                                                     % endfor
 
                                                                     <br />
@@ -409,13 +409,13 @@
                                                             <tr>
                                                             </tr>
                                                             <tr>
-                                                                <a href="http://maps.google.es/?q=${object.company_id.property_name}%20${object.company_id.street}%20${object.company_id.city}" style="background-color:transparent" target="_blank">
+                                                                <a href="http://maps.google.es/?q=${object.company_id.display_name}%20${object.company_id.street}%20${object.company_id.city}" style="background-color:transparent" target="_blank">
                                                                     <br />
                                                                     <img src="https://www.aldahotels.es/firma/email/llegada/como-llegar.png" alt="Ver mapa" border="0">
                                                                 </a>
                                                                 <p>
                                                                     <br />
-                                                              <a href="https://www.google.com/maps/dir/?api=1&destination=${object.company_id.property_name}%20${object.company_id.street}%20${object.company_id.city}" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 20px; padding: 10px 20px 10px 20px;">
+                                                              <a href="https://www.google.com/maps/dir/?api=1&destination=${object.company_id.display_name}%20${object.company_id.street}%20${object.company_id.city}" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 20px; padding: 10px 20px 10px 20px;">
                                                                         <div style="padding: 0.5em; background-color: #45C2B1; border-color: #45C2B1; border-width: 2px;border-style:solid; border-bottom-style: solid;border-left-style: solid;border-right-style: solid;border-top-style: solid;-webkit-border-radius: 10; -moz-border-radius: 10; border-radius: 10px;">¿Como
                                                                             llegar desde su ubicación actual?</div>
                                                               </a>
@@ -545,11 +545,132 @@
                         <!--Article with thumbnail-->
                         <tr> </tr>
                         <!--Section with sidebar-->
-                        <tr> </tr>
+                        <tr>
+                            <td class="borderbottom" style="padding: 10px 0px 10px 30px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="620" class="columns">
+                                    <tr valign="top">
+                                        <td width="50%" class="columncontainer">
+                                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="padding: 20px 30px 20px 0px;">
+                                                        <table border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #555555; padding: 10px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;"> Información
+                                                                    adicional</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding: 20px 0 10px 0;">
+                                                                    <table width="50px" style="width: 50px;" height="5px" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <p style="font-size: 2em; line_height=0px; color: #45C2B1;">__</p>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                            </tr>
+                                                            <tr>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
                         <!--Article with thumbnail-->
-                        <tr> </tr>
+                        <tr>
+                            <td class="borderbottom" style="padding: 30px 0px 0px 0px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="650" class="columns">
+                                    <tr valign="top">
+                                        <td width="10%" class="columncontainer">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td height="115" style="padding: 20px 0px 0px 30px;">
+                                                        <img src="https://www.aldahotels.es/firma/email/llegada/en-coche.png" width="115" height="115" border="0" alt="Coche" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width="90%" class="columncontainer">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="padding: 20px 30px 20px 30px;">
+                                                        <table border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #45C2B1; padding: 0 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">Cómo acceder</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="justify" class="subheading" style="color: #555555">
+                                                                    <strong> En coche</strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">
+                                                                    <p>
+                                                                        <br />
+                                                                        <a href="https://www.google.com/maps/dir/?api=1&destination=${object.company_id.display_name}%20${object.company_id.street}%20${object.company_id.city}">Pulse en este enlace,
+                                                                            para
+                                                                            conocer como llegar desde su ubicación actual</a>
+                                                                    </p>
+                                                              Si vienes en coche, queremos informarte de que la zona de aparcamiento en los alrededores del hotel cuenta con zona azul.&nbsp; </td>
+                                                            </tr>
+                                                            <tr>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
                         <!--Article with thumbnail-->
-                        <tr> </tr>
+                        <tr>
+                            <td class="borderbottom" style="padding: 30px 0px 0px 0px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="650" class="columns">
+                                    <tr valign="top">
+                                        <td width="10%" class="columncontainer">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td height="115" style="padding: 20px 0px 0px 30px;">
+                                                        <img src="https://www.aldahotels.es/firma/email/llegada/en-bus.png" width="116" height="115" border="0" alt="Bus" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width="90%" class="columncontainer">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="padding: 20px 30px 20px 30px;">
+                                                        <table border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #45C2B1; padding: 0 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">Cómo acceder</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="subheading" style="color: #555555">
+                                                                    <strong> En autobús o tren</strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="justify" class="paragraph" style="padding: 10px 0 0 0;"> Si vienes en autobús nos encontramos a unos 7 minutos andando de la estación. Si quieres venir en autobús urbano, te recomendamos la línea Oviedo (Estación)-C.C. Azabache.<br /><br />
+                                                                    Si llegas a la ciudad en tren, el tiempo andando hasta el hotel es de unos 12 minutos. En este caso, puedes tomar la línea C-Facultades-Lugones de autobús urbano. <br />
+                                                              </td>
+                                                            </tr>
+                                                            <tr>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
                         <!--Block Layout-->
                         <tr>
                             <td>
@@ -626,10 +747,10 @@
                                                                 <td valign="top" style="padding: 30px 30px 20px 30px; height: 230px; background-color:#45C2B1 ">
                                                                     <table border="0" cellspacing="0" cellpadding="0">
                                                                         <tr>
-                                                                            <td align="justify" class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #FFFFFF; padding: 15px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">${object.company_id.property_name}</td>
+                                                                            <td align="justify" class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #FFFFFF; padding: 15px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">${object.company_id.display_name}</td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td align="justify" class="paragraph" style="padding: 10px 0 0 0;color: #FFFFFF;">El Hotel Confort, de 2 estrellas, se encuentra situado a escasos metros del centro comercial y empresarial de Oviedo. Nuestro hotel les ofrece la posibilidad de disfrutar de un rincón tranquilo y agradable sin los agobios y las saturaciones de las calles principales, pero obteniendo toda la accesibilidad de estar situado cerca del centro de la ciudad.</td>
+                                                                            <td align="justify" class="paragraph" style="padding: 10px 0 0 0;color: #FFFFFF;">El hotel Alda Centro Oviedo&nbsp; &nbsp; se encuentra situado a escasos metros del centro comercial y empresarial de Oviedo. Ofrece la posibilidad de disfrutar de un rincón tranquilo y agradable sin los agobios y las saturaciones de las calles principales, pero obteniendo toda la accesibilidad de estar situado cerca del centro de la ciudad.</td>
                                                                         </tr>
                                                                         <tr>
                                                                         </tr>
@@ -652,7 +773,10 @@
                                     <tr valign="top">
                                         <td width="50%" class="columncontainer">
                                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
-
+                                                <tr>
+                                                    <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #45C2B1; padding: 0 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">NUESTRAS REDES SOCIALES</td>
+                                                    <td style="padding: 0 0 50px 0;"> </td>
+                                                </tr>
                                                 <tr>
                                                 </tr>
                                                 <tr>
@@ -670,7 +794,177 @@
                                     <tr valign="top">
                                         <td width="33%" class="columncontainer">
                                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                
+                                                <tr>
+                                                    <td valign="top" style="padding: 20px 15px 15px 0px;">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 20px 0;">
+                                                                    <a href="https://www.facebook.com/aldahotels" target="_blank">
+                                                                        <img src="http://www.aldahotels.es/firma/email/llegada/fb.png" width="51" height="50" border="0" alt="Facebook" />
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #3B5998; padding: 0 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                                                                    Facebook</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 0 10px 0;">
+                                                                    <table width="50px" style="width: 50px;" height="5px" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td background-color="#3B5998" height="5px" style="font-size: 1px; line-height: 5px;">
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" class="paragraph" style="padding: 10px 0 0 0;"> Toda la actualidad de nuestros alojamientos, así como ofertas y promociones.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 0 20px 0; ">
+                                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <!--[if gte mso 12>
+                                                              <div style="border: 2px solid #5e96ea;">
+                                                                <![endif]-->
+                                                                                <a href="https://www.facebook.com/aldahotels" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 20px; padding: 10px 20px 10px 20px;">
+                                                                                    <div style="padding: 0.5em; background-color: #45C2B1; border-color: #45C2B1; border-width: 2px;border-style:solid; border-bottom-style: solid;border-left-style: solid;border-right-style: solid;border-top-style: solid;-webkit-border-radius: 10; -moz-border-radius: 10; border-radius: 10px;">Dale
+                                                                                        a Me gusta</div>
+                                                                                </a>
+                                                                                <!--[if gte mso 12>
+                                                              </div>
+                                                              <![endif]-->
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width="33%" class="columncontainer">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="padding: 20px 15px 15px 0px;">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 20px 0;">
+                                                                    <a href="https://www.instagram.com/aldahotels" target="_blank">
+                                                                        <img src="http://www.aldahotels.es/firma/email/llegada/ig.png" width="50" height="50" border="0" alt="Instagram" />
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #E56459; padding: 0 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                                                                    Instagram</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 0 10px 0;">
+                                                                    <table width="50px" style="width: 50px;" height="5px" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td background-color="#E56459" height="5px" style="font-size: 1px; line-height: 5px;">
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" class="paragraph" style="padding: 10px 0 0 0;"> Cada detalle cuenta, y es por eso que tratamos de reflejarlo en nuestras fotos.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 0 20px 0; ">
+                                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <!--[if gte mso 12>
+                                                              <div style="border: 2px solid #5e96ea;">
+                                                                <![endif]-->
+                                                                                <a href="https://www.instagram.com/aldahotels/" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 20px; padding: 10px 20px 10px 20px;">
+                                                                                    <div style="padding: 0.5em; background-color: #45C2B1; border-color: #45C2B1; border-width: 2px;border-style:solid; border-bottom-style: solid;border-left-style: solid;border-right-style: solid;border-top-style: solid;-webkit-border-radius: 10; -moz-border-radius: 10; border-radius: 10px;">#Entra
+                                                                                    </div>
+                                                                                </a>
+                                                                                <!--[if gte mso 12>
+                                                              </div>
+                                                              <![endif]-->
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width="33%" class="columncontainer">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="padding: 20px 15px 15px 0px;">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 20px 0;">
+                                                                    <a href="https://www.twitter.com/aldahotels" target="_blank">
+                                                                        <img src="http://www.aldahotels.es/firma/email/llegada/tw.png" width="50" height="50" border="0" alt="Twitter" />
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #1DA1F2; padding: 0 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                                                                    Twitter</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 0 10px 0;">
+                                                                    <table width="50px" style="width: 50px;" height="5px" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td background-color="#1DA1F2" height="5px" style="font-size: 1px; line-height: 5px;">
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" class="paragraph" style="padding: 10px 0 0 0;"> Propuestas al minuto para hacer de tu viaje una experiencia inmejorable.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 0 20px 0; ">
+                                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <!--[if gte mso 12>
+                                                              <div style="border: 2px solid #5e96ea;">
+                                                                <![endif]-->
+                                                                                <a href="https://www.twitter.com/aldahotels" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 20px; padding: 10px 20px 10px 20px;">
+                                                                                    <div style="padding: 0.5em; background-color: #45C2B1; border-color: #45C2B1; border-width: 2px;border-style:solid; border-bottom-style: solid;border-left-style: solid;border-right-style: solid;border-top-style: solid;-webkit-border-radius: 10; -moz-border-radius: 10; border-radius: 10px;">Síguenos
+                                                                                    </div>
+                                                                                </a>
+                                                                                <!--[if gte mso 12>
+                                                              </div>
+                                                              <![endif]-->
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!--2 Column-->
+                        <tr>
+                        </tr>
+                        <!--1 Column-->
                         <tr>
                             <td style="padding: 30px 30px 20px 30px;background-color:#45C2B1">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -690,7 +984,7 @@
                                     <tr valign="top">
                                     </tr>
                                 </table>
-                                <img src="https://www.aldahotels.es/firma/email/llegada/confort-logo.png" alt="Confort" />
+                                <img src="https://www.aldahotels.es/firma/email/llegada/logo.png" width="300" height="75" alt="Alda Hotels" />
                                 <table border="0" cellpadding="0" cellspacing="0" width="620" class="columns">
                                     <tr valign="top">
                                     </tr>
@@ -702,7 +996,15 @@
                             <td class="footer">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td align="justify" class="smalltext" style="color: #828282; padding: 20px 20px 20px 20px;">“En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), así como lo dispuesto en el Reglamento General de Protección de Datos y demás legislación concordante, le informamos de que sus datos personales figuran en un sistema de tratamiento automatizado cuya responsabilidad es de Hoteles Rías Altas SL, con dirección postal a efecto de notificación en PLAZA DE ALGALIA DE ARRIBA, Nº 3 – 15704 SANTIAGO DE COMPOSTELA. Los datos personales que existen en nuestro poder están protegidos por nuestra Política de Privacidad y serán tratados con la finalidad de atender su solicitud de información o contacto, así como mantenerle informado de nuestros productos y servicios, actuales o futuros. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal. Para ejercer sus derechos de acceso, rectificación, cancelación, oposición, limitación, supresión y/o portabilidad debe enviar un correo electrónico a protecciondatos@aldahotels.com” “Este correo podría ser confidencial. Si recibe este e-mail por error, por favor elimínelo, así como cualquier documento adjunto, y notifíquelo a su emisor. Si usted no es el destinatario del mensaje, sepa que no está permitida ninguna difusión, copia o utilización no autorizada.”</td>
+                                        <td align="justify" class="smalltext" style="color: #828282; padding: 20px 20px 20px 20px;">En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y del Comercio Electrónico, así como
+                                            de
+                                            la Ley Orgánica 15/1999 del 13 de Diciembre de Protección de Datos de Carácter Personal y demás legislación concordante, se le informa que sus datos personales figuran en un fichero automatizado cuya
+                                            responsabilidad es de Hoteles Rías Altas S.L. Praza da Algalia de Arriba, 3 C.P. 15704 Santiago de Compostela. Los datos personales que existen en nuestro poder están protegidos por nuestra Política de
+                                            Privacidad
+                                            y solo serán utilizados para los fines propios de nuestra actividad. Para ejercer sus derechos de acceso, rectificación, cancelación u oposición debe enviar un correo electrónico a info@aldahotels.com
+                                            indicándonos la opción a realizar. Este correo podría ser confidencial. Si recibe este e-mail por error, por favor elimínelo, así como cualquier documento adjunto, y notifíquelo a su emisor. Si usted no es
+                                            el
+                                        destinatario del mensaje, sepa que no está permitida ninguna difusión, copia o utilización no autorizada.</td>
                                     </tr>
                                     <tr>
                                     </tr>
