@@ -449,7 +449,51 @@ Además, debido a la situación actual, queremos evitar al máximo posible el co
                             </td>
                         </tr>
                         <!--Article with thumbnail amount-->
-                        <tr> </tr>
+                        <tr>
+							<td class="borderbottom" style="padding: 30px 0px 0px 0px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="650" class="columns">
+                                    <tr valign="top">
+                                        <td width="10%" class="columncontainer">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td height="115" style="padding: 20px 0px 0px 30px;">
+                                                        <img src="https://www.aldahotels.es/firma/email/llegada/importes.png" border="0" alt="Importes" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width="90%" class="columncontainer">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="padding: 20px 30px 20px 30px;">
+                                                        <table border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #45C2B1; padding: 0 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">IMPORTES</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="justify" class="subheading" style="color: #555555">
+                                                                    <strong>Noches</strong>: ${object.get_grouped_reservations_json('confirm')|sum(attribute='nights')}
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">
+                                                                    <strong>Base imponible</strong>: ${object.amount_untaxed} €<br />
+                                                                    <strong>I.V.A (10%)</strong>: ${object.amount_tax} €<br />
+                                                                    <strong>Precio total</strong>: ${object.amount_total} €<br />
+                                                                    <br />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+			</tr>
                         <!--Article with thumbnail rooms data-->
                         <tr>
                             <td class="borderbottom" style="padding: 30px 0px 0px 0px;">
