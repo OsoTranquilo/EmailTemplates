@@ -7,7 +7,7 @@
         min-width: 100% !important;
     }
     a {
-        color: #5e96ea;
+        color: #45c2b1;
         text-decoration: none;
         font-weight: bold;
     }
@@ -26,7 +26,7 @@
     .link a {
         font-family: sans-serif;
         font-size: 12px;
-        color: #ffffff;
+        color: #45c2b1;
     }
     .subheading {
         font-size: 14px;
@@ -126,7 +126,7 @@
                         <td>
                           <![endif]-->
                     <!--Content Wrapper-->
-                    <table class="content" background-color="#f6f6f6" align="center" cellpadding="0" cellspacing="0" border="0" style="width: 650px !important; border: 1px solid #eeeeee; background-color:#f6f6f6;">
+          <table class="content" background-color="#f6f6f6" align="center" cellpadding="0" cellspacing="0" border="0" style="width: 650px !important; border: 1px solid #eeeeee; background-color:#f6f6f6;">
                         <!--Header-->
                         <tr>
                             <td style="padding: 30px 30px 20px 30px;background-color:#1B1B1B">
@@ -173,24 +173,33 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Hola ${object.partner_id.firstname}<br />
-                                            Tu reserva en <b>${object.company_id.property_name}</b> queda confirmada. Te esperamos el día <b>${object.room_lines[0].checkin[8:10]} del ${object.room_lines[0].checkin[5:7]} de
-                                                ${object.room_lines[0].checkin[0:4]}</b>. Si podemos ayudarte en cualquier tipo de gestión, no dudes en hacérnoslo saber.<br />
-                                        </td>
+                                        <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Hola ${object.partner_id.firstname}:<br>
+Tu reserva en <strong>${object.company_id.property_name}</strong> queda confirmada. Te esperamos el día <strong>${object.room_lines[0].checkin[8:10]} del ${object.room_lines[0].checkin[5:7]} de
+                                        ${object.room_lines[0].checkin[0:4]}</strong>. Si podemos ayudarte en cualquier tipo de gestión, no dudes en hacérnoslo saber.<br>
+										<br><strong><center>Realiza ya tu check-in y ahorra tiempo</center></strong><br>Accede a <strong>nuestro sistema de registro rápido</strong>. En pocos pasos conseguirás registrar tus datos de manera ágil, sencilla y segura, <strong>evitando colas en recepción</strong>.
+Además, debido a la situación actual, queremos evitar al máximo posible el contacto físico y respetar las distancias. Si registras tus datos en nuestro sistema, <strong>tu paso por recepción será mucho más rápido</strong>, pudiendo disfrutar de la comodidad de tu habitación enseguida.</td>
                                     </tr>
                                     <tr>
                                         <td align="center" style="padding: 20px 0 0px 0; ">
                                             <table border="0" cellspacing="0" cellpadding="0">
                                                 <tr>
-                                                    <td align="center">
-                                                        <a href="tel:${object.company_id.phone}" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 20px; padding: 10px 20px 10px 20px;">
-                                                            <div style="padding: 0.5em; background-color: #45C2B1; border-color: #45C2B1; border-width: 2px;border-style:solid; border-bottom-style: solid;border-left-style: solid;border-right-style: solid;border-top-style: solid;-webkit-border-radius: 10; -moz-border-radius: 10; border-radius: 10px;">Contactar
+                                                  <td align="center">
+                                                  	<p>
+                                                        <a href="${object.room_lines[0].fc_url}" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 2em; padding: 10px 20px 10px 20px;">
+                                                            <div style="padding: 0.5em; background-color: #45C2B1; border-color: #45C2B1; border-width: 2px;border-style:solid; border-bottom-style: solid;border-left-style: solid;border-right-style: solid;border-top-style: solid;-webkit-border-radius: 10; -moz-border-radius: 10; border-radius: 10px;font-size: 12px;">Hacer check-in
                                                             </div>
-                                                        </a>
-                                                    </td>
+                                                       <center><br><img src="https://www.aldahotels.es/firma/email/llegada/check-in.png" alt="Hacer check-in" width="80px" height="80px" href="${object.room_lines[0].fc_url}"/></center></a>
+                                                   </p>
+													  <tr>
+                                                                <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">También te invitamos a que <a href="https://www.aldahotels.es/covid-free/" target="_blank">conozcas nuestras medidas de prevención del COVID-19</a> y saber qué es lo que estamos haciendo para garantizar tu seguridad y la de todos.<br/>
+                                                                </td>
+                                                            </tr>
+											  </td>
                                                 </tr>
-                                            </table>
-                                        </td>
+
+                                  </table>
+								<td
+                             </td>
                                     </tr>
                                 </table>
                             </td>
@@ -531,41 +540,7 @@
                         <!--Article with thumbnail-->
                         <tr> </tr>
                         <!--Section with sidebar-->
-                        <tr>
-                            <td class="borderbottom" style="padding: 10px 0px 10px 30px;">
-                                <table border="0" cellpadding="0" cellspacing="0" width="620" class="columns">
-                                    <tr valign="top">
-                                        <td width="50%" class="columncontainer">
-                                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                    <td valign="top" style="padding: 20px 30px 20px 0px;">
-                                                        <table border="0" cellspacing="0" cellpadding="0">
-                                                            <tr>
-                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #555555; padding: 10px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;"> Información
-                                                                    adicional</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td style="padding: 20px 0 10px 0;">
-                                                                    <table width="50px" style="width: 50px;" height="5px" border="0" cellspacing="0" cellpadding="0">
-                                                                        <tr>
-                                                                            <p style="font-size: 2em; line_height=0px; color: #45C2B1;">__</p>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                            </tr>
-                                                            <tr>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                        <tr> </tr>
                         <!--Article with thumbnail-->
                         <tr>
                             <td class="borderbottom" style="padding: 30px 0px 0px 0px;">
