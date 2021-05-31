@@ -188,7 +188,16 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="paragraph" style="padding: 10px 0 0 0;" align="justify">Hola ${object.partner_id.firstname}<br>
+                                                <td class="paragraph" style="padding: 10px 0 0 0;" align="justify">Hola
+                                                        % if object.firstname:
+                                                            ${object.firstname}:
+                                                        % endif
+                                                        % if object.firstname == False:
+                                                            % if object.name:
+                                                                ${object.name}:
+                                                            % endif
+                                                        % endif
+                                                    <br>
                                                     Tu reserva en <b>${object.company_id.property_name}</b> se ha anulado correctamente. No es necesario que hagas nada más.
                                                     Si la cancelación conlleva la devolución de alguna cantidad, nos pondremos en contacto contigo.
                                                     En caso de que tengas alguna duda, estaremos encantados de atenderte.
@@ -255,20 +264,24 @@
                                                                                     ${object.partner_id.contact_address}<br>
                                                                                     % endif
                                                                                     <br>
-                                                                                    % for rline in object.get_grouped_reservations_json('cancelled'):
-                                                                                    <strong>
-                                                                                        ${rline['num']} x ${rline['room_type']['name']}
-                                                                                        % if rline['childrens'] == 0:
-                                                                                        (${rline['adults']} Adultos)
+                                                                                    % for rline in object.room_lines:
+                                                                                        % if rline.state == 'cancelled'
+
+                                                                                        <strong>
+                                                                                        ${rline.room_type_id.name}
+                                                                                        % if rline.children == 0:
+                                                                                        (${rline.adults} Adultos)
                                                                                         % else:
-                                                                                        (${rline['adults']} Adultos + ${rline['childrens']} Niños)
+                                                                                        (${rline.adults} Adultos + ${rline.childrens} Niños)
                                                                                         % endif
                                                                                         <br />
                                                                                     </strong>
                                                                                     <br>
-                                                                                    <strong style="margin-left:2em">Entrada</strong>: ${format_tz(rline['checkin']+ ' 00:00:00', format="%d de %B de %Y")}<br>
-                                                                                    <strong style="margin-left:2em">Salida</strong>: ${format_tz(rline['checkout']+ ' 00:00:00', format="%d de %B de %Y")}<br>
-                                                                                    <strong style="margin-left:2em" 2="">Nº de noches</strong>: ${rline['nights']}<br><br>
+                                                                                    <strong style="margin-left:2em">Entrada</strong>: ${format_tz(rline.real_checkin+ ' 00:00:00', format="%d de %B de %Y")}<br>
+                                                                                    <strong style="margin-left:2em">Salida</strong>: ${format_tz(rline.real_checkout+ ' 00:00:00', format="%d de %B de %Y")}<br>
+                                                                                    <br><br>
+                                                                                                                                                             % endif
+
                                                                                     % endfor
                                                                                 </td>
                                                                             </tr>
@@ -318,14 +331,13 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td class="subheading" style="color: #555555" align="justify">
-                                                                                    <strong>Noches</strong>: ${len(object.room_lines[0].reservation_lines)}</td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td class="paragraph" style="padding: 10px 0 0 0;" align="justify">
                                                                                     <strong>Base imponible</strong>: ${object.amount_untaxed} €<br>
                                                                                     <strong>I.V.A (10%)</strong>: ${object.amount_tax} €<br>
                                                                                     <strong>Precio total</strong>: ${object.amount_total} €<br>
-                                                                                    <strong>Coste de cancelación</strong>: [[importe]]<br>
+                                                                                    <strong>Coste de cancelación: ${object.amount_total} €<br></strong>
                                                                                     <br>
                                                                                     <br>
                                                                                 </td>
