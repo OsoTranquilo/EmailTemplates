@@ -173,13 +173,22 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Hola ${object.partner_id.firstname}:<br>
+                                        <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Hola
+                                        % if object.partner_id.firstname:
+                                            ${object.partner_id.firstname}:
+                                        % endif
+                                        % if object.partner_id.firstname == False:
+                                            % if object.partner_id.name:
+                                                ${object.partner_id.name}:
+                                            % endif
+                                        % endif
+                                            <br>
 Tu reserva en <strong>${object.company_id.property_name}</strong> queda confirmada. Te esperamos el día <strong>${object.room_lines[0].checkin[8:10]} del ${object.room_lines[0].checkin[5:7]} de
                                         ${object.room_lines[0].checkin[0:4]}</strong>. Si podemos ayudarte en cualquier tipo de gestión, no dudes en hacérnoslo saber.<br><br><strong></strong>
 										</td>
                                     </tr>
 									<td align="justify" class="paragraph" style="padding: 0px 0 0 0;">
-										<center><p style="font-size: 2em; line_height=0px; color: #45C2B1;"><strong>IMPORTANTE</strong>&nbsp;</p></center>						
+										<center><p style="font-size: 2em; line_height=0px; color: #45C2B1;"><strong>IMPORTANTE</strong>&nbsp;</p></center>
 										<strong><center>
 										  Dependiendo del tipo de tarifa seleccionado</u>, puede que la reserva requiera <u>un pago por adelantado</u> para mantenerla. De ser así, revisa tu teléfono y sigue las instrucciones que recibirás por SMS para acceder a la plataforma de pago. En caso de no realizarlo en el plazo señalado, el hotel podrá proceder a la cancelación de tu reserva.&nbsp;<br>
 <center><br><img src="https://www.aldahotels.es/firma/email/llegada/sms.png" alt="P&S" width="80px" height="80px" href="${object.room_lines[0].fc_url}"/></center>
@@ -233,8 +242,7 @@ Además, debido a la situación actual, queremos evitar al máximo posible el co
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Si vas a llegar a nuestro alojamiento <strong>más tarde de las 14:00 h</strong>, por favor, ponte en contacto con nosotros por teléfono para poder tener una previsión del horario de llegada.<br/>
-                                                                </td>
+                                                                <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Si tienes prevista la llegada al hotel <strong>más tarde de las 14:00 h</strong>, te rogamos que contactes con nosotros a través del correo electrónico <a href="mailto:miramar@aldahotels.com">miramar@aldahotels.com</a> o en el teléfono <a href="tel:+34 984 198 391">+34 984 198 391</a>.<br></td>
                                                             </tr>
                                                           <tr> </tr>
                                 </table>
@@ -293,19 +301,20 @@ Además, debido a la situación actual, queremos evitar al máximo posible el co
                                                                     <strong style="margin-left:2em">Entrada</strong>: ${format_tz(rline['checkin']+ ' 00:00:00', format="%d de %B de %Y")}<br>
                                                                     <strong style="margin-left:2em">Salida</strong>: ${format_tz(rline['checkout']+ ' 00:00:00', format="%d de %B de %Y")}<br>
                                                                     <strong style="margin-left:2em" 2="">Nº de noches</strong>: ${rline['nights']}<br><br>
-                                                                    
+
                                                                     % endfor
 
                                                                     <br />
                                           <b><p style="color:#45C2B1";>Información importante</p></b>
-					                      <p> Las condiciones de pago  y cancelación variarán según la tipología de tarifa seleccionada:</p>
+					                      <p>Las condiciones de pago y cancelación variarán según la tipología de tarifa seleccionada:</p>
 					                      <ul>
-					                        <li>Las <strong>reservas flexibles</strong> podrán ser canceladas de manera gratuita hasta las 12:00 h del día antes de tu llegada. Estas reservas están sujetas al pago anticipado de la primera noche.</li>
-					                        <li>Las reservas de carácter <strong>no reembolsable</strong> deben ser abonadas en el momento de su confirmación. Este tipo de reservas no admiten cancelación ni modificación y, por tanto, no se reembolsará el dinero abonado en ningún caso.</li>
-											<li>Las reservas <strong>de 4 o más habitaciones</strong> pueden estar sujetas a condiciones especiales y comportar suplementos adicionales</li>
-					                        <li>Las reservas con <strong>tarifa semiflexible</strong> deben ser abonadas en el momento de la reserva, pero podrás cancelarlas hasta 7 días antes del día de tu llegada. 
-					                          
-				                            De acuerdo con el tipo de tarifa seleccionada, se requiere un pago total o parcial de la reserva para poder mantenerla. Por favor, revisa tu teléfono y sigue las instrucciones para acceder a la plataforma de pago.&nbsp;En caso de no realizarlo en el plazo señalado, el alojamiento podrá proceder a la cancelación de su reserva. En caso de duda, contáctanos. ¡Estaremos encantados de ayudarte!&nbsp;</li>
+					                        <li>Las <strong>reservas con tarifa flexible</strong> podrán ser canceladas de manera gratuita hasta las 12:00 h del día antes de tu llegada. Estas reservas están sujetas al pago anticipado de la primera noche.</li>
+					                        <li>Las <strong>reservas con tarifa semiflexible</strong> admiten cancelación gratuita hasta 7 días antes de la entrada, pasado ese plazo no admite cambios ni devoluciones.  Deben ser abonadas en el momento de su confirmación.</li>
+											<li>Las <strong>reservas con tarifa no reembolsable</strong>, no admiten cancelación ni modificación y, por tanto, no se reembolsará el dinero abonado en ningún caso.  Deben ser abonadas en el momento de su confirmación.</li>
+					                        <li>En <strong>reservas con tarifa semiflexible y no reembolsable</strong>, de manera excepcional y bajo aceptación expresa del alojamiento, se podrá, mediante pago de la diferencia de precio si la hubiera, además de un suplemento de 10 €, solicitar un cambio en las fechas de estancia, pero nunca devolución del dinero al tratarse ambas de tarifas no reembolsables.</li>
+											<li>De acuerdo con el tipo de tarifa seleccionada, se requiere <strong>un pago total o parcial</strong> de la reserva para poder mantenerla. Por favor, revisa tu teléfono y sigue las instrucciones para acceder a la plataforma de pago. En caso de no realizarlo en el plazo señalado, el alojamiento podrá proceder a la cancelación de su reserva.</li>
+											<li>Y recuerda, las <strong>reservas de 4 o más habitaciones</strong> pueden estar sujetas a condiciones especiales y comportar suplementos adicionales.</li>
+											<p>En caso de duda, contáctanos. ¡Estaremos encantados de ayudarte!</p>
 					                        </ul></td>
                                                             </tr>
                                                             <tr>
