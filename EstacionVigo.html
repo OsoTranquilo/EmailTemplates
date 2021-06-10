@@ -173,17 +173,24 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Hola ${object.partner_id.firstname}:<br>
+                                        <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Hola
+                                        % if object.partner_id.firstname:
+                                            ${object.partner_id.firstname}:
+                                        % endif
+                                        % if object.partner_id.firstname == False:
+                                            % if object.partner_id.name:
+                                                ${object.partner_id.name}:
+                                            % endif
+                                        % endif
+                                            <br>
 Tu reserva en <strong>${object.company_id.property_name}</strong> queda confirmada. Te esperamos el día <strong>${object.room_lines[0].checkin[8:10]} del ${object.room_lines[0].checkin[5:7]} de
-                                        ${object.room_lines[0].checkin[0:4]}</strong>. Si podemos ayudarte en cualquier tipo de gestión, no dudes en hacérnoslo saber.<br>
-										<br><strong></strong>
+                                        ${object.room_lines[0].checkin[0:4]}</strong>. Si podemos ayudarte en cualquier tipo de gestión, no dudes en hacérnoslo saber.<br><br><strong></strong>
 										</td>
                                     </tr>
 									<td align="justify" class="paragraph" style="padding: 0px 0 0 0;">
-										<center><p style="font-size: 2em; line_height=0px; color: #45C2B1;"><strong>IMPORTANTE</strong>&nbsp;</p></center>						
+										<center><p style="font-size: 2em; line_height=0px; color: #45C2B1;"><strong>IMPORTANTE</strong>&nbsp;</p></center>
 										<strong><center>
-										  Según las condiciones de pago de esta reserva, <u>recibirás un SMS solicitando el pago total o parcial de la misma</u>. Por favor, revisa tu teléfono móvil y accede a la plataforma de pago. Si tienes cualquier duda o problema, ponte en contacto con nosotros.<br>
-										  Si el pago no se realiza correctamente, <u>el alojamiento se reserva el derecho de cancelar la reserva</u>.<br>
+										  Dependiendo del tipo de tarifa seleccionado</u>, puede que la reserva requiera <u>un pago por adelantado</u> para mantenerla. De ser así, revisa tu teléfono y sigue las instrucciones que recibirás por SMS para acceder a la plataforma de pago. En caso de no realizarlo en el plazo señalado, el hotel podrá proceder a la cancelación de tu reserva.&nbsp;<br>
 <center><br><img src="https://www.aldahotels.es/firma/email/llegada/sms.png" alt="P&S" width="80px" height="80px" href="${object.room_lines[0].fc_url}"/></center>
 <center><br><img src="https://www.aldahotels.es/firma/email/llegada/ps.gif" alt="P&S" href="${object.room_lines[0].fc_url}"/></center>
 <p style="font-size: 2em; line_height=0px; color: #45C2B1;">__</p>
@@ -225,9 +232,9 @@ Además, debido a la situación actual, queremos evitar al máximo posible el co
                                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                 <tr>
                                                     <td valign="top" style="padding: 20px 30px 20px 0px;">
-                                                        <table border="0" cellspacing="0" cellpadding="0">
+                                                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
                                                             <tr>
-                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #444444; padding: 10px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">Descubre Vigo</td>
+                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #444444; padding: 10px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">¡POR CIERTO!&nbsp;</td>
                                                             </tr>
                                                             <tr>
                                                                 <td style="padding: 20px 0 10px 0;">
@@ -235,90 +242,9 @@ Además, debido a la situación actual, queremos evitar al máximo posible el co
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Si necesitas alguna recomendación sobre <b>qué ver o hacer en la ciudad</b>, aquí te damos unos pequeños consejos.<br/>
-                                                                </td>
+                                                                <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Si tienes prevista la llegada al hotel <strong>más tarde de las 14:00 h</strong>, te rogamos que contactes con nosotros a través del correo electrónico <a href="mailto:aldaestacion@aldahotels.com">aldaestacion@aldahotels.com</a> o en los teléfonos <a href="tel:+986 953 635">+34 986 953 635</a> y <a href="tel:+886 300 025">+34 886 300 025</a>.<br></td>
                                                             </tr>
-                                                            <tr>
-                                                                <td align="left" valign="middle" style="padding: 30px 0 20px 0; ">
-                                                                    <table border="0" cellspacing="0" cellpadding="0">
-                                                                        <tr>
-                                                                            <td align="center">
-                                                                                <!--[if gte mso 12>
-                                                          <div style="border: 2px solid #5e96ea;">
-                                                            <![endif]-->
-                                                                                <a href="https://www.laguiadelviajero.es/que-ver-en-vigo-en-3-dias/" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 15px; padding: 10px 10px 10px 10px;">
-                                                                                    <div style="padding: 0.5em; background-color: #45C2B1; border-color: #45C2B1; border-width: 2px;border-style:solid; border-bottom-style: solid;border-left-style: solid;border-right-style: solid;border-top-style: solid;-webkit-border-radius: 10; -moz-border-radius: 10; border-radius: 10px;">¡Vamos allá!
-                                                                                    </div>
-                                                                                </a>
-                                                                                <!--[if gte mso 12>
-                                                          </div>
-                                                          <![endif]-->
-                                                                                
-                                                                                <!--[if gte mso 12>
-                                                          </div>
-                                                          <![endif]-->
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td width="50%" class="columncontainer">
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                    <td valign="top" style="padding: 20px 30px 20px 0px;">
-                                                        <table border="0" width="100%" cellspacing="0" cellpadding="0" style="background: #f9f9f9;">
-                                                            <tr>
-                                                                <td style="padding: 10px 30px 10px 30px;">
-                                                                    <table border="0" cellspacing="0" cellpadding="0">
-                                                                        <tr>
-                                                                            <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #666666; padding: 10px 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">
-                                                                                Servicios</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td style="padding: 20px 0 10px 0; background-color:#F9F9F9">
-                                                                                <table border="0" cellspacing="0" cellpadding="0">
-                                                                                    <tr>
-                                                                                        <td height="50" valign="middle" style="padding: 0 10px 0 0;">
-                                                                                            <img src="https://www.aldahotels.es/firma/email/llegada/info.png" alt="Info" />
-                                                                                        </td>
-                                                                                        <td class="listitem" style="padding: 10px 10px 0 0;color: #666666; font-weight: 200">Información turística</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td height="50" valign="middle" style="padding: 0 10px 0 0;">
-                                                                                            <img src="https://www.aldahotels.es/firma/email/llegada/wifi.png" alt="Wifi" />
-                                                                                        </td>
-                                                                                        <td class="listitem" style="padding: 10px 10px 0 0;color: #666666; font-weight: 200">Wi-Fi gratuito</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td height="50" valign="middle" style="padding: 0 10px 0 0;">
-                                                                                            <img src="https://www.aldahotels.es/firma/email/llegada/restaurante.png" alt="Restauracion" />
-                                                                                        </td>
-                                                                                        <td class="listitem" style="padding: 10px 10px 0 0;color: #666666; font-weight: 200">Desayuno buffet</td>
-                                                                                    </tr>
-                                                                                    <tr>
-																					                                                                                    <tr>
-                                                                                        <td height="50" valign="middle" style="padding: 0 10px 0 0;">
-                                                                                          <img src="https://www.aldahotels.es/firma/email/llegada/ascensor-clientes.png" alt="Ascensor" />
-                                                                                        </td>
-                                                                                        <td class="listitem" style="padding: 10px 10px 0 0;color: #666666; font-weight: 200">Ascensor</td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                          <tr> </tr>
                                 </table>
                             </td>
                         </tr>
@@ -380,13 +306,15 @@ Además, debido a la situación actual, queremos evitar al máximo posible el co
 
                                                                     <br />
                                           <b><p style="color:#45C2B1";>Información importante</p></b>
-					                      <p> Las condiciones de pago  y cancelación variarán según la tipología de tarifa seleccionada:</p>
+					                      <p>Las condiciones de pago y cancelación variarán según la tipología de tarifa seleccionada:</p>
 					                      <ul>
-					                        <li>Las <strong>reservas flexibles</strong> podrán ser canceladas de manera gratuita hasta las 12:00 h del día antes de tu llegada. Estas reservas están sujetas al pago anticipado de la primera noche.</li>
-					                        <li>Las reservas de carácter <strong>no reembolsable</strong> deben ser abonadas en el momento de su confirmación. Este tipo de reservas no admiten cancelación ni modificación y, por tanto, no se reembolsará el dinero abonado en ningún caso.</li>
-					                        <li>Las reservas con <strong>tarifa semiflexible</strong> deben ser abonadas en el momento de la reserva, pero podrás cancelarlas hasta 7 días antes del día de tu llegada. 
-					                          
-				                            De acuerdo con el tipo de tarifa seleccionada, se requiere un pago total o parcial de la reserva para poder mantenerla. Por favor, revisa tu teléfono y sigue las instrucciones para acceder a la plataforma de pago.&nbsp;En caso de no realizarlo en el plazo señalado, el alojamiento podrá proceder a la cancelación de su reserva. En caso de duda, contáctanos. ¡Estaremos encantados de ayudarte!&nbsp;</li>
+					                        <li>Las <strong>reservas con tarifa flexible</strong> podrán ser canceladas de manera gratuita hasta las 12:00 h del día antes de tu llegada. Estas reservas están sujetas al pago anticipado de la primera noche.</li>
+					                        <li>Las <strong>reservas con tarifa semiflexible</strong> admiten cancelación gratuita hasta 7 días antes de la entrada, pasado ese plazo no admite cambios ni devoluciones.  Deben ser abonadas en el momento de su confirmación.</li>
+											<li>Las <strong>reservas con tarifa no reembolsable</strong>, no admiten cancelación ni modificación y, por tanto, no se reembolsará el dinero abonado en ningún caso.  Deben ser abonadas en el momento de su confirmación.</li>
+					                        <li>En <strong>reservas con tarifa semiflexible y no reembolsable</strong>, de manera excepcional y bajo aceptación expresa del alojamiento, se podrá, mediante pago de la diferencia de precio si la hubiera, además de un suplemento de 10 €, solicitar un cambio en las fechas de estancia, pero nunca devolución del dinero al tratarse ambas de tarifas no reembolsables.</li>
+											<li>De acuerdo con el tipo de tarifa seleccionada, se requiere <strong>un pago total o parcial</strong> de la reserva para poder mantenerla. Por favor, revisa tu teléfono y sigue las instrucciones para acceder a la plataforma de pago. En caso de no realizarlo en el plazo señalado, el alojamiento podrá proceder a la cancelación de su reserva.</li>
+											<li>Y recuerda, las <strong>reservas de 4 o más habitaciones</strong> pueden estar sujetas a condiciones especiales y comportar suplementos adicionales.</li>
+											<p>En caso de duda, contáctanos. ¡Estaremos encantados de ayudarte!</p>
 					                        </ul></td>
                                                             </tr>
                                                             <tr>
@@ -418,13 +346,13 @@ Además, debido a la situación actual, queremos evitar al máximo posible el co
                                                             <tr>
                                                             </tr>
                                                             <tr>
-                                                                <a href="http://maps.google.es/?q=${object.company_id.property_name}%20${object.company_id.street}%20${object.company_id.city}" style="background-color:transparent" target="_blank">
+                                                                <a href="http://maps.google.es/?q=${object.company_id.display_name}%20${object.company_id.street}%20${object.company_id.city}" style="background-color:transparent" target="_blank">
                                                                     <br />
                                                                     <img src="https://www.aldahotels.es/firma/email/llegada/como-llegar.png" alt="Ver mapa" border="0">
                                                                 </a>
                                                                 <p>
                                                                     <br />
-                                                              <a href="https://www.google.com/maps/dir/?api=1&destination=${object.company_id.property_name}%20${object.company_id.street}%20${object.company_id.city}" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 20px; padding: 10px 20px 10px 20px;">
+                                                              <a href="https://www.google.com/maps/dir/?api=1&destination=${object.company_id.display_name}%20${object.company_id.street}%20${object.company_id.city}" target="_blank" style="text-decoration: none; color: #FFFFFF; font-size: 20px; padding: 10px 20px 10px 20px;">
                                                                         <div style="padding: 0.5em; background-color: #45C2B1; border-color: #45C2B1; border-width: 2px;border-style:solid; border-bottom-style: solid;border-left-style: solid;border-right-style: solid;border-top-style: solid;-webkit-border-radius: 10; -moz-border-radius: 10; border-radius: 10px;">¿Como
                                                                             llegar desde su ubicación actual?</div>
                                                               </a>
@@ -556,97 +484,9 @@ Además, debido a la situación actual, queremos evitar al máximo posible el co
                         <!--Section with sidebar-->
                         <tr> </tr>
                         <!--Article with thumbnail-->
-                        <tr>
-                            <td class="borderbottom" style="padding: 30px 0px 0px 0px;">
-                                <table border="0" cellpadding="0" cellspacing="0" width="650" class="columns">
-                                    <tr valign="top">
-                                        <td width="10%" class="columncontainer">
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                    <td height="115" style="padding: 20px 0px 0px 30px;">
-                                                        <img src="https://www.aldahotels.es/firma/email/llegada/en-coche.png" width="115" height="115" border="0" alt="Coche" />
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td width="90%" class="columncontainer">
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                    <td valign="top" style="padding: 20px 30px 20px 30px;">
-                                                        <table border="0" cellspacing="0" cellpadding="0">
-                                                            <tr>
-                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #45C2B1; padding: 0 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">Cómo acceder</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td align="justify" class="subheading" style="color: #555555">
-                                                                    <strong> En coche</strong>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">
-                                                                <p>
-                                                                        <br />
-                                                                        <a href="https://www.google.com/maps/dir/?api=1&destination=${object.company_id.property_name}%20${object.company_id.street}%20${object.company_id.city}">Pulse en este enlace,
-                                                                            para
-                                                                            conocer como llegar desde su ubicación actual</a>
-                                                                  </p>
-<!-- DATOS PARRAFO COCHE p -->
-<p> Si vienes en coche, podrás parar 15 minutos delante de la puerta del hotel, para bajar tus maletas. Para aparcar, contamos con un parking concertado (bajo disponibilidad, ajena a Alda Hotels), en la propia Estación de Urzáiz.<br>
-</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                        <tr> </tr>
                         <!--Article with thumbnail-->
-                        <tr>
-                            <td class="borderbottom" style="padding: 30px 0px 0px 0px;">
-                                <table border="0" cellpadding="0" cellspacing="0" width="650" class="columns">
-                                    <tr valign="top">
-                                        <td width="10%" class="columncontainer">
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                    <td height="115" style="padding: 20px 0px 0px 30px;">
-                                                        <img src="https://www.aldahotels.es/firma/email/llegada/en-bus.png" width="116" height="115" border="0" alt="Bus" />
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td width="90%" class="columncontainer">
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                    <td valign="top" style="padding: 20px 30px 20px 30px;">
-                                                      <table border="0" cellspacing="0" cellpadding="0">
-                                                            <tr>
-                                                                <td class="h2" style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #45C2B1; padding: 0 0 0 0; text-transform: uppercase; letter-spacing: 0.5px;">Cómo acceder</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="subheading" style="color: #555555">
-                                                                    <strong> En autobús o tren</strong>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td align="justify" class="paragraph" style="padding: 10px 0 0 0;">Si vienes en autobús, podrás bajar en la parada de la calle Urzáiz. A escasos minutos andando encontrarás el hotel.<br>
-                                                   Si vienes en tren, tienes dos posibles paradas: la Estación de Urzaiz, a un par de minutos, en la misma calle; o la Estación de Guixar, a 1 km del hotel. Si vienes desde esta última, deberás dirigirte a la calle García Barbón, hasta llegar a la intersección con la calle Alfonso XIII. Subiendo dicha calle, a unos 300 m tendrás el hotel.<br></td>
-                                                            </tr>
-                                                            <tr>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                        <tr> </tr>
                         <!--Block Layout-->
                         <tr>
                             <td>
@@ -972,7 +812,15 @@ Además, debido a la situación actual, queremos evitar al máximo posible el co
                             <td class="footer">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td align="justify" class="smalltext" style="color: #828282; padding: 20px 20px 20px 20px;">“En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), así como lo dispuesto en el Reglamento General de Protección de Datos y demás legislación concordante, le informamos de que sus datos personales figuran en un sistema de tratamiento automatizado cuya responsabilidad es de Alda Rías Baixas SL, con dirección postal a efecto de notificación en PLAZA DE ALGALIA DE ARRIBA, Nº 3 – 15704 SANTIAGO DE COMPOSTELA. Los datos personales que existen en nuestro poder están protegidos por nuestra Política de Privacidad y serán tratados con la finalidad de atender su solicitud de información o contacto, así como mantenerle informado de nuestros productos y servicios, actuales o futuros. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal. Para ejercer sus derechos de acceso, rectificación, cancelación, oposición, limitación, supresión y/o portabilidad debe enviar un correo electrónico a protecciondatos@aldahotels.com” “Este correo podría ser confidencial. Si recibe este e-mail por error, por favor elimínelo, así como cualquier documento adjunto, y notifíquelo a su emisor. Si usted no es el destinatario del mensaje, sepa que no está permitida ninguna difusión, copia o utilización no autorizada.”</td>
+                                        <td align="justify" class="smalltext" style="color: #828282; padding: 20px 20px 20px 20px;">En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y del Comercio Electrónico, así como
+                                            de
+                                            la Ley Orgánica 15/1999 del 13 de Diciembre de Protección de Datos de Carácter Personal y demás legislación concordante, se le informa que sus datos personales figuran en un fichero automatizado cuya
+                                            responsabilidad es de Alda Rías Baixas S.L. Praza da Algalia de Arriba, 3 C.P. 15704 Santiago de Compostela. Los datos personales que existen en nuestro poder están protegidos por nuestra Política de
+                                            Privacidad
+                                            y solo serán utilizados para los fines propios de nuestra actividad. Para ejercer sus derechos de acceso, rectificación, cancelación u oposición debe enviar un correo electrónico a info@aldahotels.com
+                                            indicándonos la opción a realizar. Este correo podría ser confidencial. Si recibe este e-mail por error, por favor elimínelo, así como cualquier documento adjunto, y notifíquelo a su emisor. Si usted no es
+                                            el
+                                        destinatario del mensaje, sepa que no está permitida ninguna difusión, copia o utilización no autorizada.</td>
                                     </tr>
                                     <tr>
                                     </tr>
